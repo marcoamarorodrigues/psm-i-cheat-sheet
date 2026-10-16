@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://marcorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener">
+<a href="https://marcoamarorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener">
   <img src="social-preview.png" alt="Scrum Cheat Sheet · PSM I" width="100%">
 </a>
 
@@ -9,7 +9,7 @@
 **Everything you need to revise for the Professional Scrum Master™ I assessment, on one page.**
 Validated line by line against <a href="https://scrumguides.org/scrum-guide.html" target="_blank" rel="noopener">The Scrum Guide™ 2020</a>.
 
-<a href="https://marcorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/▶%20Open%20the%20cheat%20sheet-1E7FD8?style=for-the-badge" alt="Open the cheat sheet"></a>
+<a href="https://marcoamarorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/▶%20Open%20the%20cheat%20sheet-1E7FD8?style=for-the-badge" alt="Open the cheat sheet"></a>
 
 <img src="https://img.shields.io/badge/Scrum%20Guide-2020-22A861?style=flat-square" alt="Scrum Guide 2020">
 <img src="https://img.shields.io/badge/Exam-PSM%20I-0B2545?style=flat-square" alt="PSM I">
@@ -61,7 +61,7 @@ Common mistakes found in other cheat sheets, corrected here:
 
 ## 🚀 How to use
 
-- **Online:** open the <a href="https://marcorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener">live page</a>. It adapts to mobile, tablet and desktop.
+- **Online:** open the <a href="https://marcoamarorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener">live page</a>. It adapts to mobile, tablet and desktop.
 - **Print:** in the browser, *Print → Save as PDF* (A4, background graphics on).
 - **Offline:** download `index.html`. It is a single, self-contained file with no dependencies.
 
