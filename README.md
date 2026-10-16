@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://marcoamarorodrigues.github.io/psm-i-cheat-sheet/" target="_blank" rel="noopener">
-  <img src="social-preview.png" alt="Scrum Cheat Sheet · PSM I" width="100%">
+  <img src="assets/images/social-preview.webp" alt="Scrum Cheat Sheet · PSM I" width="100%">
 </a>
 
 # Scrum Cheat Sheet · PSM I
@@ -78,7 +78,10 @@ Common mistakes found in other cheat sheets, corrected here:
 ```
 psm-i-cheat-sheet/
 ├── index.html           # The cheat sheet (responsive, self-contained)
-├── social-preview.png   # Repository social card
+├── assets/
+│   └── images/
+│       ├── social-preview.webp  # README cover
+│       └── social-preview.png   # Repository social card (Settings)
 ├── README.md
 └── LICENSE              # CC BY-SA 4.0
 ```
