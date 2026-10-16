@@ -1,0 +1,183 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Scrum Cheat Sheet · PSM I</title>
+<style>
+:root{--navy:#0B2545;--green:#22A861;--blue:#1E7FD8;--sky1:#EAF4FD;--sky2:#F7FBFF;--sun:#FFB36B;--ink:#13294B;--muted:#4A607E;--card:rgba(255,255,255,.86)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#F2F8FE}body{min-height:100vh;font-family:Inter,"Inter Display",sans-serif;color:var(--ink);overflow-x:hidden;position:relative;background-attachment:fixed;
+background:radial-gradient(circle at 96% 4%,rgba(255,179,107,.55) 0,rgba(255,200,150,.25) 14%,transparent 32%),linear-gradient(170deg,#DCEEFC 0%,var(--sky1) 35%,var(--sky2) 100%)}
+.stripes{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.stripes i{position:absolute;width:1600px;height:70px;transform:rotate(-24deg);left:-200px}
+.net{position:absolute;right:0;top:0;width:340px;max-width:45vw;height:auto;opacity:.5}
+.wrap{position:relative;max-width:1080px;margin:0 auto;padding:56px 48px 0}
+h1{font-family:Poppins;font-weight:800;font-size:54px;letter-spacing:-1px;color:var(--navy);line-height:1}
+h1 span{color:var(--green)}
+.sub{margin-top:10px;display:flex;gap:10px;align-items:center;font-size:17px;color:var(--muted);font-weight:500}
+.pill{background:var(--navy);color:#fff;border-radius:99px;padding:5px 13px;font-size:14px;font-weight:700;letter-spacing:.4px}
+.pill.g{background:var(--green)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px}
+.card{background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:0 4px 18px rgba(11,37,69,.08);border:1px solid rgba(30,127,216,.12)}
+.full{grid-column:1/-1}
+h2{font-family:Poppins;font-size:19px;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:9px;margin-bottom:10px}
+h2 b{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border-radius:99px;padding:5px 11px;font-size:13.5px;font-weight:600;background:#E8F2FC;color:var(--blue)}
+.chip.g{background:#E3F6EC;color:#178A4D}
+.chip.n{background:var(--navy);color:#fff}
+.lbl{font-size:11.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:9px 0 5px}
+.lbl:first-of-type{margin-top:0}
+p.s{font-size:14px;line-height:1.38;color:var(--ink)}
+.acc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.acc div{border-radius:12px;padding:9px 10px;background:#fff;border-top:4px solid var(--blue);font-size:12.5px;line-height:1.35;color:var(--muted)}
+.acc div strong{display:block;font-size:14px;color:var(--navy);margin-bottom:3px}
+/* events */
+.sprint{border:2.5px dashed var(--green);border-radius:16px;padding:12px 12px 10px;position:relative;margin-top:4px}
+.sprint .tag{position:absolute;top:-12px;left:14px;background:var(--green);color:#fff;font-weight:800;font-size:12.5px;padding:3px 10px;border-radius:99px}
+.ev{display:grid;grid-template-columns:1.25fr 1fr 1.2fr 1fr;gap:9px;margin-top:6px}
+.e{background:#fff;border-radius:12px;padding:9px 10px;font-size:12.5px;line-height:1.35;color:var(--muted);box-shadow:0 1px 0 rgba(0,0,0,.03)}
+.e .t{font-family:Poppins;font-weight:800;color:var(--blue);font-size:21px;line-height:1}
+.e .n{font-weight:800;color:var(--navy);font-size:14.5px;margin:3px 0 3px}
+.flow{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12.5px;color:var(--muted);font-weight:600}
+.flow em{font-style:normal;color:var(--green);font-weight:800}
+/* artifacts */
+.art{display:flex;flex-direction:column;gap:7px}
+.a{display:grid;grid-template-columns:1fr 18px 1fr;align-items:center;gap:6px}
+.a .x{background:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:13.5px;color:var(--navy);border-left:4px solid var(--navy)}
+.a .x small{display:block;font-weight:500;color:var(--muted);font-size:11.5px;margin-top:1px}
+.a .c{background:#E3F6EC;border-radius:10px;padding:8px 10px;font-weight:800;font-size:13.5px;color:#178A4D}
+.a .c small{display:block;font-weight:500;color:#2f6b4a;font-size:11.5px;margin-top:1px}
+.a span{color:var(--green);font-weight:900;text-align:center}
+/* traps */
+.traps{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px}
+.tr{font-size:13px;line-height:1.35;display:grid;grid-template-columns:20px 1fr;gap:4px}
+.tr i{font-style:normal;width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:11px;font-weight:900;display:grid;place-items:center;margin-top:1px}
+.tr s{color:#B04A3A;text-decoration-thickness:1.5px}
+.foot{position:relative;max-width:1080px;margin:0 auto;padding:28px 48px 26px;gap:24px;display:flex;justify-content:space-between;align-items:flex-end;font-size:13px;color:var(--muted);font-weight:600}
+.slogan{white-space:nowrap}.slogan b{font-weight:800;letter-spacing:.6px;font-size:12.5px}
+.exam{display:flex;gap:8px;margin-bottom:8px}
+.exam div{flex:1;background:var(--navy);color:#fff;border-radius:12px;padding:8px 6px;text-align:center;font-size:11.5px;font-weight:600;opacity:.95}
+.exam div strong{display:block;font-family:Poppins;font-size:22px;line-height:1.05;color:#8FE3B5}
+
+.ev .e,.acc div,.a .x,.a .c{min-width:0}
+@media (max-width:900px){
+ .wrap{padding:36px 24px 0}.foot{padding:24px 24px 24px;flex-direction:column;align-items:flex-start}
+ .slogan{white-space:normal}
+ h1{font-size:clamp(34px,8vw,54px)}
+ .grid{grid-template-columns:1fr;gap:18px}
+ .ev{grid-template-columns:1fr 1fr}
+ .acc{grid-template-columns:1fr}
+ .traps{grid-template-columns:1fr}
+ .card.full[style*="330px"]{grid-template-columns:1fr !important}
+ h2{flex-wrap:wrap;row-gap:2px}
+ h2 span{margin-left:0 !important;flex-basis:100%}
+ .flow{flex-direction:column;align-items:flex-start;gap:4px}
+ .foot span[style*="max-width"]{max-width:none !important}
+}
+@media (max-width:520px){
+ .wrap{padding:28px 16px 0}.foot{padding:20px 16px}
+ .sub{flex-wrap:wrap}
+ .ev{grid-template-columns:1fr}
+ .a{grid-template-columns:1fr;gap:4px}.a span{transform:rotate(90deg);line-height:1}
+ .sprint .tag{font-size:11px;white-space:nowrap;max-width:calc(100% - 28px);overflow:hidden;text-overflow:ellipsis}
+ .sprint{padding-top:18px}
+}
+</style></head>
+<body>
+<div class="stripes">
+  <i style="top:300px;background:rgba(34,168,97,.07)"></i>
+  <i style="top:390px;height:40px;background:rgba(255,255,255,.55)"></i>
+  <i style="top:900px;height:90px;background:rgba(34,168,97,.06)"></i>
+  <i style="top:1010px;height:36px;background:rgba(255,255,255,.6)"></i>
+</div>
+<svg class="net" viewBox="0 0 340 260">
+  <g fill="#1E7FD8" opacity=".55">
+    <circle cx="300" cy="30" r="4"/><circle cx="240" cy="70" r="3"/><circle cx="310" cy="110" r="3.5"/><circle cx="190" cy="25" r="2.5"/><circle cx="270" cy="160" r="3"/><circle cx="210" cy="120" r="2.5"/><circle cx="325" cy="200" r="2.5"/>
+  </g>
+  <g stroke="#1E7FD8" stroke-width="1" opacity=".35" fill="none">
+    <path d="M300 30L240 70L310 110L270 160L325 200M240 70L190 25M240 70L210 120L270 160M300 30L190 25M310 110L210 120"/>
+  </g>
+  <g fill="#0B2545" opacity=".18">
+    <circle cx="130" cy="20" r="1.6"/><circle cx="150" cy="20" r="1.6"/><circle cx="170" cy="20" r="1.6"/><circle cx="130" cy="40" r="1.6"/><circle cx="150" cy="40" r="1.6"/><circle cx="170" cy="40" r="1.6"/><circle cx="150" cy="60" r="1.6"/><circle cx="170" cy="60" r="1.6"/><circle cx="170" cy="80" r="1.6"/>
+  </g>
+</svg>
+
+<div class="wrap">
+  <h1>SCRUM <span>CHEAT SHEET</span></h1>
+  <div class="sub"><span class="pill">PSM I</span><span class="pill g">Scrum Guide 2020</span> Everything you need, one page.</div>
+
+  <div class="grid">
+    <!-- Foundations -->
+    <div class="card">
+      <h2><b style="background:var(--navy)">01</b>Foundations</h2>
+      <p class="s">A <strong>lightweight framework</strong> that helps people, teams and organizations generate value through adaptive solutions for complex problems.</p>
+      <div class="lbl" style="margin-top:10px">Founded on</div>
+      <div class="chips"><span class="chip n">Empiricism</span><span class="chip n">Lean thinking</span></div>
+      <div class="lbl">3 pillars</div>
+      <div class="chips"><span class="chip">Transparency</span><span class="chip">Inspection</span><span class="chip">Adaptation</span></div>
+      <div class="lbl">5 values</div>
+      <div class="chips"><span class="chip g">Commitment</span><span class="chip g">Focus</span><span class="chip g">Openness</span><span class="chip g">Respect</span><span class="chip g">Courage</span></div>
+    </div>
+
+    <!-- Artifacts -->
+    <div class="card">
+      <h2><b style="background:var(--green)">02</b>Artifacts &amp; Commitments</h2>
+      <div class="art">
+        <div class="a"><div class="x">Product Backlog<small>Emergent, ordered list · single source of work</small></div><span>→</span><div class="c">Product Goal<small>Long-term objective · one at a time</small></div></div>
+        <div class="a"><div class="x">Sprint Backlog<small>Why + What + How · by &amp; for Developers</small></div><span>→</span><div class="c">Sprint Goal<small>Single objective for the Sprint</small></div></div>
+        <div class="a"><div class="x">Increment<small>Usable stepping stone to Product Goal</small></div><span>→</span><div class="c">Definition of Done<small>Formal quality standard</small></div></div>
+      </div>
+      <p class="s" style="font-size:12.5px;margin-top:8px;color:var(--muted)">Refinement is an <strong>ongoing activity</strong>, not an event.</p>
+    </div>
+
+    <!-- Team -->
+    <div class="card full">
+      <h2><b style="background:var(--blue)">03</b>Scrum Team<span style="font-family:Inter;font-size:13.5px;font-weight:600;color:var(--muted);margin-left:6px">· typically ≤ 10 people · cross-functional · self-managing · no sub-teams, no hierarchies</span></h2>
+      <div class="acc">
+        <div style="border-top-color:var(--navy)"><strong>Product Owner</strong>Accountable for maximizing product value &amp; effective Product Backlog management. One person, not a committee.</div>
+        <div style="border-top-color:var(--green)"><strong>Scrum Master</strong>Accountable for the Scrum Team's effectiveness. A true leader who serves the team &amp; the organization.</div>
+        <div style="border-top-color:var(--blue)"><strong>Developers</strong>Create the Sprint plan, instill quality via the DoD, adapt the plan daily, hold each other accountable.</div>
+      </div>
+    </div>
+
+    <!-- Events -->
+    <div class="card full">
+      <h2><b style="background:var(--green)">04</b>Events<span style="font-family:Inter;font-size:13.5px;font-weight:600;color:var(--muted);margin-left:6px">· max timeboxes for a 1-month Sprint (shorter Sprints → usually shorter)</span></h2>
+      <div class="sprint">
+        <span class="tag">SPRINT · fixed length ≤ 1 month · the container</span>
+        <div class="ev">
+          <div class="e"><div class="t">8h</div><div class="n">Sprint Planning</div>Why is it valuable? · What can be Done? · How will it get done?</div>
+          <div class="e"><div class="t">15 min</div><div class="n">Daily Scrum</div>Developers inspect progress toward the Sprint Goal.</div>
+          <div class="e"><div class="t">4h</div><div class="n">Sprint Review</div>Inspect outcome, adapt Product Backlog. A working session — never a gate.</div>
+          <div class="e"><div class="t">3h</div><div class="n">Retrospective</div>Plan ways to increase quality &amp; effectiveness. Concludes the Sprint.</div>
+        </div>
+        <div class="flow"><span>Next Sprint starts <em>immediately</em> after the previous one</span><span>Only the <em>PO</em> can cancel — if the Sprint Goal becomes obsolete</span></div>
+      </div>
+    </div>
+
+    <!-- Traps -->
+    <div class="card full" style="padding-bottom:14px">
+      <h2><b style="background:#D9822B">!</b>Exam traps — what the Guide actually says</h2>
+      <div class="traps">
+        <div class="tr"><i>✓</i><span>It's <strong>accountabilities</strong>, not roles. <s>"Increment Goal"</s> doesn't exist.</span></div>
+        <div class="tr"><i>✓</i><span>SM is <strong>not</strong> a project manager &amp; doesn't assign work.</span></div>
+        <div class="tr"><i>✓</i><span>PO may <strong>delegate</strong> backlog work, but stays accountable.</span></div>
+        <div class="tr"><i>✓</i><span>Scope may be <strong>renegotiated with the PO</strong>; quality never decreases.</span></div>
+        <div class="tr"><i>✓</i><span>Many Increments per Sprint; release <strong>before</strong> the Sprint ends is OK.</span></div>
+        <div class="tr"><i>✓</i><span>Not Done? Can't be released or shown at Review → <strong>back to PB</strong>.</span></div>
+        <div class="tr"><i>✓</i><span>Many teams, one product: <strong>1 PB, 1 PO, 1 Product Goal</strong>, shared DoD.</span></div>
+        <div class="tr"><i>✓</i><span>PO/SM attend the Daily only if they work on Sprint Backlog items (as Developers).</span></div>
+      </div>
+    </div>
+
+    <!-- Exam -->
+    <div class="card full" style="display:grid;grid-template-columns:330px 1fr;gap:18px;align-items:center;padding:14px 18px">
+      <div class="exam"><div><strong>80</strong>questions</div><div><strong>60'</strong>minutes</div><div><strong>85%</strong>to pass</div></div>
+      <p class="s" style="font-size:13.5px">Scenario-based: <strong>apply principles, don't memorize</strong>. Think empiricism, self-management, value. Watch the keywords <strong>best · most likely · should · must</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <span style="max-width:395px;font-size:10.5px;line-height:1.4;font-weight:500">Based on The Scrum Guide™ 2020 by Ken Schwaber &amp; Jeff Sutherland (scrumguides.org), licensed CC BY-SA 4.0. Adapted by <a href="https://www.linkedin.com/in/marcoamarorodrigues/" target="_blank" rel="noopener" style="color:var(--blue);font-weight:700">Marco Amaro Rodrigues</a> · Licensed CC BY-SA 4.0. Not affiliated with or endorsed by Scrum.org. PSM™ is a trademark of Scrum.org.</span>
+  <span class="slogan"><b style="color:var(--navy)">DRIVING DIGITAL TRANSFORMATION.</b> <b style="color:var(--green)">DELIVERING IMPACT.</b> <b style="color:var(--blue)">EMPOWERING PEOPLE.</b></span>
+</div>
+</body></html>
